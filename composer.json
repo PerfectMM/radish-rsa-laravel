@@ -1,12 +1,12 @@
 {
-    "name": "radish/rsa-laravel",
+    "name": "min-radish/rsa-laravel",
     "description": "PHP下RAS数据加密",
     "keywords": ["RSA", "laravel"],
     "type": "library",
     "version": "0.1.0",
     "authors": [
         {
-            "name": "Radish",
+            "name": "MinRadish",
             "email": "1004622952@qq.com"
         }
     ],
