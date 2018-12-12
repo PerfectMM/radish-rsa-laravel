@@ -18,7 +18,7 @@ class RsaServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/rsa.php', 'rsa'
+            __DIR__ . '/config/rsa.php', 'rsa'
         );
     }
 }
