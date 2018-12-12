@@ -17,5 +17,12 @@
         "psr-4": {
           "Radish\\Rsa\\Laravel\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Radish\\Rsa\\Larave\\RsaServiceProvider"
+            ]
+        }
     }
 }
