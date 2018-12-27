@@ -1,6 +1,6 @@
 <?php
 
-namespace Radish\Rsa\Larave\Traits;
+namespace Radish\Rsa\Laravel\Traits;
 
 /**
  * @author Radish

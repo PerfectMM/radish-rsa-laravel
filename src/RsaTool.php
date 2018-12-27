@@ -1,5 +1,5 @@
 <?php 
-namespace Radish\Rsa\Larave;
+namespace Radish\Rsa\Laravel;
 
 /**
  * @author Radish
@@ -7,8 +7,8 @@ namespace Radish\Rsa\Larave;
 
 class RsaTool
 {
-    use Radish\Rsa\Larave\Traits\DataFormat;
-    use Radish\Rsa\Larave\Traits\KeyTool;
+    use Radish\Rsa\Laravel\Traits\DataFormat;
+    use Radish\Rsa\Laravel\Traits\KeyTool;
 
     const PADDING = OPENSSL_PKCS1_PADDING;
     public static $key_type_array = ['file', 'string'];
