@@ -21,7 +21,7 @@ trait DataFormat
                 continue;
             }
             $string .= $d . $key . '=' . $val;
-            $d = "|"
+            $d = "|";
         }
 
         return $string;
@@ -30,11 +30,11 @@ trait DataFormat
     private function _formatDecrypt($data)
     {
         if (strstr("|", $data) && strstr("=", $data)) {
-            $data = explode("|" $data);
+            $data = explode("|", $data);
             $temp = [];
             foreach ($data as $key => $val) {
                 $array = explode("=", $val);
-                $temp[$array[0]] = $array[1]
+                $temp[$array[0]] = $array[1];
             }
             $data = $temp;
         }

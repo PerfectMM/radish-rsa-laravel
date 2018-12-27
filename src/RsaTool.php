@@ -7,8 +7,8 @@ namespace Radish\Rsa\Laravel;
 
 class RsaTool
 {
-    use Radish\Rsa\Laravel\Traits\DataFormat;
-    use Radish\Rsa\Laravel\Traits\KeyTool;
+    use Traits\DataFormat;
+    use Traits\KeyTool;
 
     const PADDING = OPENSSL_PKCS1_PADDING;
     public static $key_type_array = ['file', 'string'];
@@ -26,8 +26,8 @@ class RsaTool
         $this->type =  in_array($config['key_type'], self::$key_type_array) ? $config['key_type'] : 'string';
         $this->rsa_type = in_array($config['rsa_type'], self::$rsa_type_array) ? $config['rsa_type'] : 'data';
         $this->except_key = $config['except_key'];
-        $this->_privateKey = $config[$this->rsa_type]['private_key'];
-        $this->_publicKey = $config[$this->rsa_type]['public_key'];
+        $this->_privateKey = $config[$this->type]['private_key'];
+        $this->_publicKey = $config[$this->type]['public_key'];
     }
 
     public static function __callStatic($name, $arguments)
@@ -50,7 +50,7 @@ class RsaTool
     {
         $ciphertext = false;
         $data = $this->_formatEncryption($data);
-        if (openssl_public_encrypt($data, $result, $this->_publicKey, self::PADDING))) {
+        if (openssl_public_encrypt($data, $result, $this->_publicKey, self::PADDING)) {
             $ciphertext = $this->_encode($result, 'base64');
         }
 
