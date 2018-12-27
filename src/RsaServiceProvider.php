@@ -1,5 +1,5 @@
 <?php 
-namespace Radish\Rsa\Larave;
+namespace Radish\Rsa\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
